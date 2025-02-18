@@ -674,18 +674,29 @@ def create_ui(config, theme_name="Ocean"):
         padding: 15px;
         border-radius: 10px;
     }
+    .full-width-logo {
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+    .full-width-logo img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
     """
 
     with gr.Blocks(
-            title="Browser Use WebUI", theme=theme_map[theme_name], css=css
+            title="", theme=theme_map[theme_name], css=css
     ) as demo:
         with gr.Row():
-            gr.Markdown(
-                """
-                # 🌐 Browser Use WebUI
-                ### Control your browser with AI assistance
-                """,
-                elem_classes=["header-text"],
+            gr.Image(
+                value="assets/logo.png",
+                show_label=False,
+                container=True,
+                scale=1,
+                show_download_button=False,
+                elem_classes=["full-width-logo"]
             )
 
         with gr.Tabs() as tabs:
