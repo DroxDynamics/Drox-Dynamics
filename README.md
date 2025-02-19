@@ -1,17 +1,17 @@
-<img src="./assets/web-ui.png" alt="Browser Use Web UI" width="full"/>
+<img src="./assets/logo2.png" alt="Drox Dynamics" width="full"/>
 
 <br/>
 
-[![GitHub stars](https://img.shields.io/github/stars/browser-use/web-ui?style=social)](https://github.com/browser-use/web-ui/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/IgorKhrupin/Drox-Dynamics?style=social)](https://github.com/IgorKhrupin/Drox-Dynamics/stargazers)
 [![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
 [![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
 [![WarmShao](https://img.shields.io/twitter/follow/warmshao?style=social)](https://x.com/warmshao)
 
-This project builds upon the foundation of the [browser-use](https://github.com/browser-use/browser-use), which is designed to make websites accessible for AI agents.
+This project builds upon the foundation of the [Drox Dynamics](https://github.com/IgorKhrupin/Drox-Dynamics), which is designed to make websites accessible for AI agents.
 
 We would like to officially thank [WarmShao](https://github.com/warmshao) for his contribution to this project.
 
-**WebUI:** is built on Gradio and supports most of `browser-use` functionalities. This UI is designed to be user-friendly and enables easy interaction with the browser agent.
+**Drox Dynamics UI:** is built on Gradio and supports most of `browser-use` functionalities. This UI is designed to be user-friendly and enables easy interaction with the browser agent.
 
 **Expanded LLM Support:** We've integrated support for various Large Language Models (LLMs), including: Google, OpenAI, Azure OpenAI, Anthropic, DeepSeek, Ollama etc. And we plan to add support for even more models in the future.
 
@@ -33,8 +33,8 @@ Read the [quickstart guide](https://docs.browser-use.com/quickstart#prepare-the-
 
 #### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/browser-use/web-ui.git
-cd web-ui
+git clone https://github.com/IgorKhrupin/Drox-Dynamics.git
+cd Drox-Dynamics
 ```
 
 #### Step 2: Set Up Python Environment
@@ -92,8 +92,8 @@ cp .env.example .env
 #### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/browser-use/web-ui.git
-cd web-ui
+git clone https://github.com/IgorKhrupin/Drox-Dynamics.git
+cd Drox-Dynamics
 ```
 
 2. Create and configure environment file:
@@ -127,14 +127,14 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
 ## Usage
 
 ### Local Setup
-1.  **Run the WebUI:**
+1.  **Run the Drox Dynamics UI:**
     After completing the installation steps above, start the application:
     ```bash
-    python webui.py --ip 127.0.0.1 --port 7788
+    python dropdx.py --ip 127.0.0.1 --port 7788
     ```
-2. WebUI options:
-   - `--ip`: The IP address to bind the WebUI to. Default is `127.0.0.1`.
-   - `--port`: The port to bind the WebUI to. Default is `7788`.
+2. UI options:
+   - `--ip`: The IP address to bind the UI to. Default is `127.0.0.1`.
+   - `--port`: The port to bind the UI to. Default is `7788`.
    - `--theme`: The theme for the user interface. Default is `Ocean`.
      - **Default**: The standard theme with a balanced design.
      - **Soft**: A gentle, muted color scheme for a relaxed viewing experience.
@@ -144,7 +144,7 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
      - **Citrus**: A vibrant, citrus-inspired palette with bright and fresh colors.
      - **Ocean** (default): A blue, ocean-inspired theme providing a calming effect.
    - `--dark-mode`: Enables dark mode for the user interface.
-3.  **Access the WebUI:** Open your web browser and navigate to `http://127.0.0.1:7788`.
+3.  **Access the UI:** Open your web browser and navigate to `http://127.0.0.1:7788`.
 4.  **Using Your Own Browser(Optional):**
     - Set `CHROME_PATH` to the executable path of your browser and `CHROME_USER_DATA` to the user data directory of your browser. Leave `CHROME_USER_DATA` empty if you want to use local user data.
       - Windows
@@ -159,7 +159,7 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
          CHROME_USER_DATA="/Users/YourUsername/Library/Application Support/Google/Chrome"
         ```
     - Close all Chrome windows
-    - Open the WebUI in a non-Chrome browser, such as Firefox or Edge. This is important because the persistent browser context will use the Chrome data when running the agent.
+    - Open the UI in a non-Chrome browser, such as Firefox or Edge. This is important because the persistent browser context will use the Chrome data when running the agent.
     - Check the "Use Own Browser" option within the Browser Settings.
 5. **Keep Browser Open(Optional):**
     - Set `CHROME_PERSISTENT_SESSION=true` in the `.env` file.
@@ -222,6 +222,6 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
    ```
 
 ## Changelog
-- [x] **2025/01/26:** Thanks to @vvincent1234. Now browser-use-webui can combine with DeepSeek-r1 to engage in deep thinking!
-- [x] **2025/01/10:** Thanks to @casistack. Now we have Docker Setup option and also Support keep browser open between tasks.[Video tutorial demo](https://github.com/browser-use/web-ui/issues/1#issuecomment-2582511750).
-- [x] **2025/01/06:** Thanks to @richard-devbot. A New and Well-Designed WebUI is released. [Video tutorial demo](https://github.com/warmshao/browser-use-webui/issues/1#issuecomment-2573393113).
+- [x] **2025/01/26:** Thanks to @vvincent1234. Now Drox Dynamics can combine with DeepSeek-r1 to engage in deep thinking!
+- [x] **2025/01/10:** Thanks to @casistack. Now we have Docker Setup option and also Support keep browser open between tasks.[Video tutorial demo](https://github.com/IgorKhrupin/Drox-Dynamics/issues/1#issuecomment-2582511750).
+- [x] **2025/01/06:** Thanks to @richard-devbot. A New and Well-Designed UI is released. [Video tutorial demo](https://github.com/IgorKhrupin/Drox-Dynamics/issues/1#issuecomment-2573393113).

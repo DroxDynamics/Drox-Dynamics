@@ -13,6 +13,7 @@ import os
 logger = logging.getLogger(__name__)
 
 import gradio as gr
+print(f"Gradio Version: {gr.__version__}")
 
 from browser_use.agent.service import Agent
 from playwright.async_api import async_playwright
@@ -665,25 +666,6 @@ def create_ui(config, theme_name="Ocean"):
         margin: auto !important;
         padding-top: 20px !important;
     }
-    .header-text {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-    .theme-section {
-        margin-bottom: 20px;
-        padding: 15px;
-        border-radius: 10px;
-    }
-    .full-width-logo {
-        width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
-    }
-    .full-width-logo img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: contain !important;
-    }
     """
 
     with gr.Blocks(
@@ -700,7 +682,7 @@ def create_ui(config, theme_name="Ocean"):
             )
 
         with gr.Tabs() as tabs:
-            with gr.TabItem("⚙️ Agent Settings", id=1):
+            with gr.TabItem("Agent Settings", id=1):
                 with gr.Group():
                     agent_type = gr.Radio(
                         ["org", "custom"],
@@ -741,7 +723,7 @@ def create_ui(config, theme_name="Ocean"):
                             visible=False
                         )
 
-            with gr.TabItem("🔧 LLM Configuration", id=2):
+            with gr.TabItem("LLM Configuration", id=2):
                 with gr.Group():
                     llm_provider = gr.Dropdown(
                         choices=[provider for provider,model in utils.model_names.items()],
@@ -798,7 +780,7 @@ def create_ui(config, theme_name="Ocean"):
                 outputs=llm_num_ctx
             )
 
-            with gr.TabItem("🌐 Browser Settings", id=3):
+            with gr.TabItem("Browser Settings", id=3):
                 with gr.Group():
                     with gr.Row():
                         use_own_browser = gr.Checkbox(
@@ -863,7 +845,7 @@ def create_ui(config, theme_name="Ocean"):
                         interactive=True,
                     )
 
-            with gr.TabItem("🤖 Run Agent", id=4):
+            with gr.TabItem("Run Agent", id=4):
                 task = gr.Textbox(
                     label="Task Description",
                     lines=4,
@@ -888,7 +870,7 @@ def create_ui(config, theme_name="Ocean"):
                         label="Live Browser View",
                 )
             
-            with gr.TabItem("🧐 Deep Research", id=5):
+            with gr.TabItem("Deep Research", id=5):
                 research_task_input = gr.Textbox(label="Research Task", lines=5, value="Compose a report on the use of Reinforcement Learning for training Large Language Models, encompassing its origins, current advancements, and future prospects, substantiated with examples of relevant models and techniques. The report should reflect original insights and analysis, moving beyond mere summarization of existing literature.")
                 with gr.Row():
                     max_search_iteration_input = gr.Number(label="Max Search Iteration", value=3, precision=0) # precision=0 确保是整数
@@ -900,7 +882,7 @@ def create_ui(config, theme_name="Ocean"):
                 markdown_download = gr.File(label="Download Research Report")
 
 
-            with gr.TabItem("📊 Results", id=6):
+            with gr.TabItem("Results", id=6):
                 with gr.Group():
 
                     recording_display = gr.Video(label="Latest Recording")
@@ -972,7 +954,7 @@ def create_ui(config, theme_name="Ocean"):
                     outputs=[stop_research_button, research_button],
                 )
 
-            with gr.TabItem("🎥 Recordings", id=7):
+            with gr.TabItem("Recordings", id=7):
                 def list_recordings(save_recording_path):
                     if not os.path.exists(save_recording_path):
                         return []
@@ -1006,7 +988,7 @@ def create_ui(config, theme_name="Ocean"):
                     outputs=recordings_gallery
                 )
             
-            with gr.TabItem("📁 Configuration", id=8):
+            with gr.TabItem("Configuration", id=8):
                 with gr.Group():
                     config_file_input = gr.File(
                         label="Load Config File",
