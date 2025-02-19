@@ -3,9 +3,7 @@
 <br/>
 
 [![GitHub stars](https://img.shields.io/github/stars/IgorKhrupin/Drox-Dynamics?style=social)](https://github.com/IgorKhrupin/Drox-Dynamics/stargazers)
-[![Discord](https://img.shields.io/discord/1303749220842340412?color=7289DA&label=Discord&logo=discord&logoColor=white)](https://link.browser-use.com/discord)
-[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://docs.browser-use.com)
-[![WarmShao](https://img.shields.io/twitter/follow/warmshao?style=social)](https://x.com/warmshao)
+
 
 This project builds upon the foundation of the [Drox Dynamics](https://github.com/IgorKhrupin/Drox-Dynamics), which is designed to make websites accessible for AI agents.
 
@@ -19,7 +17,7 @@ We would like to officially thank [WarmShao](https://github.com/warmshao) for hi
 
 **Persistent Browser Sessions:** You can choose to keep the browser window open between AI tasks, allowing you to see the complete history and state of AI interactions.
 
-<video src="https://github.com/user-attachments/assets/56bc7080-f2e3-4367-af22-6bf2245ff6cb" controls="controls">Your browser does not support playing this video!</video>
+
 
 ## Installation Guide
 
@@ -130,7 +128,7 @@ CHROME_PERSISTENT_SESSION=true docker compose up --build
 1.  **Run the Drox Dynamics UI:**
     After completing the installation steps above, start the application:
     ```bash
-    python dropdx.py --ip 127.0.0.1 --port 7788
+    python droxdx.py --ip 127.0.0.1 --port 7788
     ```
 2. UI options:
    - `--ip`: The IP address to bind the UI to. Default is `127.0.0.1`.
