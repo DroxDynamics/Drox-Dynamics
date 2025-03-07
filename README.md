@@ -2,7 +2,9 @@
 
 <br/>
 
-[![GitHub stars](https://img.shields.io/github/stars/IgorKhrupin/Drox-Dynamics?style=social)](https://github.com/IgorKhrupin/Drox-Dynamics/stargazers)
+[![Discord](https://img.shields.io/badge/Discord-DroxDynamics-blue)](https://discord.gg/HnUTabuM)
+[![Documentation](https://img.shields.io/badge/Documentation-📕-blue)](https://drox-dynamics.gitbook.io/docs)
+[![WebHiveOS](https://img.shields.io/twitter/follow/DroxDynamics?style=social)](https://x.com/droxdynamics)
 
 
 This project builds upon the foundation of the [Drox Dynamics](https://github.com/IgorKhrupin/Drox-Dynamics), which is designed to make websites accessible for AI agents.
