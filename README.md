@@ -9,7 +9,7 @@
 
 This project builds upon the foundation of the [Drox Dynamics](https://github.com/IgorKhrupin/Drox-Dynamics), which is designed to make websites accessible for AI agents.
 
-We sincerely appreciate [WarmShao](https://github.com/warmshao) valuable contribution to this project.
+We sincerely appreciate [Simon Walker](https://github.com/warmshao) valuable contribution to this project.
 
 **Drox Dynamics UI:** It is built on Gradio and supports most **browser-related** functionalities. This user-friendly UI facilitates seamless interaction with the browser agent.
 
